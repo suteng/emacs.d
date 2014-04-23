@@ -42,7 +42,7 @@
 
 (require 'init-editing-utils)
 (require 'init-yasnippet)
-(require 'init-irony-mode)  ;; irony-mode should init after ac yas
+;;(require 'init-irony-mode)  ;; irony-mode should init after ac yas
 ;;(require 'init-company-mode)
 ;;(require 'init-helm)
 (require 'init-autopair)
