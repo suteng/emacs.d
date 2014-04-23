@@ -31,7 +31,11 @@
  tooltip-delay 1.5
  truncate-lines nil
  truncate-partial-width-windows nil
- visible-bell t)
+ visible-bell nil)
+
+(setq ring-bell-function 'ignore)
+(setq scroll-margin 5 
+     scroll-conservatively 10000)
 
 (when *is-a-mac*
   (setq-default locate-command "mdfind"))

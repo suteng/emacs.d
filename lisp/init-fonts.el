@@ -12,7 +12,7 @@
 
 ;; Setting English Font
 (set-face-attribute
-  'default nil :font "Monaco 10")
+  'default nil :font "Monaco 12")
  
 ;; Chinese Font
 (dolist (charset '(kana han symbol cjk-misc bopomofo))
