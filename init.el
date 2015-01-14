@@ -50,8 +50,9 @@
 (require 'init-dsvn)
 (require 'init-clang-format)
 (require 'init-cc-mode)
-
-
+;;(require 'init-xcscope)
+(require 'init-rtags)
+(require 'init-evil-mode)
 ;(when *spell-check-support-enabled*
   ;(require 'init-spelling))
 
