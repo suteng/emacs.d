@@ -34,7 +34,9 @@ ARCHIVE is the string name of the package archive.")
 
 ;;; Standard package repositories
 
-(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
+;;; Standard package repositories
+
+;(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
 
 ;; We include the org repository for completeness, but don't normally
 ;; use it.
@@ -44,7 +46,9 @@ ARCHIVE is the string name of the package archive.")
   (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")))
 
 ;;; Also use Melpa for most packages
-(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
+(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
+(add-to-list 'package-archives '("melpa-stable" . "http://stable.melpa.org/packages/"))
+
 
 ;; But don't take Melpa versions of certain packages
 (setq package-filter-function
