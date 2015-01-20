@@ -35,15 +35,15 @@
 (require 'init-recentf)
 (require 'init-ido)
 (require 'init-hippie-expand)
-(require 'init-auto-complete)
+;;(require 'init-auto-complete)
 (require 'init-windows)
 (require 'init-sessions)
-(require 'init-fonts)
+;;(require 'init-fonts)
 
 (require 'init-editing-utils)
 (require 'init-yasnippet)
 ;;(require 'init-irony-mode)  ;; irony-mode should init after ac yas
-;;(require 'init-company-mode)
+(require 'init-company-mode)
 ;;(require 'init-helm)
 (require 'init-autopair)
 ;;(require 'init-ack)
@@ -53,6 +53,7 @@
 ;;(require 'init-xcscope)
 (require 'init-rtags)
 (require 'init-evil-mode)
+(require 'init-ycmd)
 ;(when *spell-check-support-enabled*
   ;(require 'init-spelling))
 
