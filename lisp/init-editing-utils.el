@@ -35,7 +35,7 @@
 
 (setq ring-bell-function 'ignore)
 (setq scroll-margin 5 
-     scroll-conservatively 10000)
+      scroll-conservatively 10000)
 
 (when *is-a-mac*
   (setq-default locate-command "mdfind"))
@@ -327,5 +327,17 @@ With arg N, insert N newlines."
   (global-set-key (kbd "M-?") 'ag-project))
 
 
+;; disable auto-save and auto-backup
+;;(setq auto-save-default nil)
+;;(setq make-backup-files nil)
+
+;; Save all tempfiles in $TMPDIR/emacs$UID/
+(defconst emacs-tmp-dir (format "%s/%s%s/" temporary-file-directory "emacs" (user-uid)))
+(setq backup-directory-alist      `((".*" . ,emacs-tmp-dir)))
+(setq auto-save-file-name-transforms   `((".*" ,emacs-tmp-dir t)))
+(setq auto-save-list-file-prefix    emacs-tmp-dir)
+
+(setq linum-format "%d ")
+(global-linum-mode 1)
 
 (provide 'init-editing-utils)

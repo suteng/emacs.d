@@ -2,16 +2,6 @@
 
 (add-hook 'after-init-hook 'global-company-mode)
 
-;; for dark background color
-;(require 'color)
-;(let ((bg (face-attribute 'default :background)))
-  ;(custom-set-faces
-   ;`(company-tooltip ((t (:inherit default :background ,(color-lighten-name bg 2)))))
-   ;`(company-scrollbar-bg ((t (:background ,(color-lighten-name bg 10)))))
-   ;`(company-scrollbar-fg ((t (:background ,(color-lighten-name bg 5)))))
-   ;`(company-tooltip-selection ((t (:inherit font-lock-function-name-face))))
-   ;`(company-tooltip-common ((t (:inherit font-lock-constant-face))))))
-
 ;; it seams company mode and yasnippet confilct is resolved
 ;; (defun check-expansion ()
 ;;   (save-excursion
@@ -35,10 +25,12 @@
 ;;             (company-complete-common)
 ;;           (indent-for-tab-command)))))
 
-;; (global-set-key [tab] 'tab-indent-or-complete)
+;;(global-set-key [tab] 'tab-indent-or-complete)
+(global-set-key (kbd "M-RET") 'company-complete)
 
+(setq company-selection-wrap-around t)
 (setq company-tooltip-limit 20)                      ; bigger popup window
-(setq company-idle-delay .3)                         ; decrease delay before autocompletion popup shows
+(setq company-idle-delay 0.2)                         ; decrease delay before autocompletion popup shows
 (setq company-echo-delay 0)                          ; remove annoying blinking
 (setq company-begin-commands '(self-insert-command)) ; start autocompletion only after typing
 
@@ -50,7 +42,7 @@
 ;; (setq company-dabbrev-downcase nil)
 ;; (setq company-dabbrev-ignore-case nil)
 ;; (setq company-tooltip-align-annotations t)
-;; (setq company-require-match 'never)
+(setq company-require-match 'never)
 
 (custom-set-faces
   '(company-preview
