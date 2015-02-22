@@ -5,4 +5,5 @@
 
 (add-hook 'c-mode-common-hook 'google-make-newline-indent)
 
+(require-package 'cd-compile)
 (provide 'init-cc-mode)
