@@ -1,16 +1,29 @@
 ;;; This file bootstraps the configuration, which is divided into
 ;;; a number of other files.
 
+
+;; Added by Package.el.  This must come before configurations of
+;; installed packages.  Don't delete this line.  If you don't want it,
+;; just comment it out by adding a semicolon to the start of the line.
+;; You may delete these explanatory comments.
+(package-initialize)
+
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 (require 'init-benchmarking) ;; Measure startup time
 
 (defconst *spell-check-support-enabled* nil) ;; Enable with t if you prefer
 (defconst *is-a-mac* (eq system-type 'darwin))
 
+(let ((old-threshold gc-cons-threshold))
+  (setq gc-cons-threshold 100000000)
+  (run-with-idle-timer 1 nil (lambda ()
+                               ;; restore the default GC threshold
+                               (setq gc-cons-threshold old-threshold))))
+
 ;;----------------------------------------------------------------------------
 ;; Bootstrap config
 ;;----------------------------------------------------------------------------
-(require 'init-compat)
+(setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (require 'init-utils)
 (require 'init-site-lisp) ;; Must come before elpa, as it may provide package.el
 (require 'init-elpa)      ;; Machinery for installing required packages
@@ -20,48 +33,26 @@
 ;; Load configs for specific features and modes
 ;;----------------------------------------------------------------------------
 
-(require-package 'wgrep)
-(require 'init-diminish)
 (require 'init-xterm)
 (require 'init-themes)
 (require 'init-osx-keys)
 (require 'init-gui-frames)
+(require 'init-editing-utils)
 (require 'init-dired)
-(require 'init-isearch)
-(require 'init-uniquify)
 (require 'init-ibuffer)
 (require 'init-flycheck)
 
 (require 'init-recentf)
 (require 'init-ido)
 (require 'init-hippie-expand)
-;;(require 'init-auto-complete)
-(require 'init-windows)
 (require 'init-sessions)
-;;(require 'init-fonts)
 
-(require 'init-editing-utils)
 (require 'init-yasnippet)
-;;(require 'init-irony-mode)  ;; irony-mode should init after ac yas
 (require 'init-company-mode)
-;;(require 'init-helm)
-(require 'init-autopair)
-;;(require 'init-ack)
-(require 'init-dsvn)
 (require 'init-clang-format)
 (require 'init-cc-mode)
-;;(require 'init-xcscope)
 (require 'init-rtags)
 (require 'init-evil-mode)
-(require 'init-ycmd)
-;(when *spell-check-support-enabled*
-  ;(require 'init-spelling))
-
-;;; Extra packages which don't require any configuration
-
-;(require-package 'gnuplot)
-;(require-package 'lua-mode)
-;(require-package 'htmlize)
 
 (when *is-a-mac*
   (require-package 'osx-location))
