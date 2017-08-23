@@ -50,6 +50,7 @@
 (require 'init-cc-mode)
 (require 'init-python-mode)
 (require 'init-evil-mode)
+(require 'init-git)
 
 (when *is-a-mac*
   (require-package 'osx-location))

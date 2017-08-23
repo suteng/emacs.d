@@ -36,5 +36,5 @@ re-downloaded in order to locate PACKAGE."
   (package-install 'use-package))
 
 (require 'use-package)
-
+(setq use-package-always-ensure t)
 (provide 'init-elpa)
