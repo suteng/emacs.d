@@ -1,8 +1,10 @@
-(require-package 'yasnippet)
-(require 'yasnippet)
 
-;;(setq yas-snippet-dirs '("~/.emacs.d/snippets"))
-
-(yas-global-mode 1)
+(use-package yasnippet
+  :ensure t
+  :defer t
+  :config
+  (setq yas-snippet-dirs '("~/.emacs.d/snippets"))
+  (add-hook 'prog-mode-hook #'yas-minor-mode)
+)
 
 (provide 'init-yasnippet)

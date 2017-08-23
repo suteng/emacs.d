@@ -45,8 +45,8 @@
 (require 'init-hippie-expand)
 (require 'init-sessions)
 
-;;(require 'init-yasnippet)
-(require 'init-company-mode)
+(require 'init-yasnippet)
+(require 'init-completion)
 (require 'init-cc-mode)
 (require 'init-python-mode)
 (require 'init-evil-mode)
