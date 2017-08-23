@@ -51,6 +51,7 @@
 (require 'init-python-mode)
 (require 'init-evil-mode)
 (require 'init-git)
+(require 'init-project)
 
 (when *is-a-mac*
   (require-package 'osx-location))
