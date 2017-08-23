@@ -45,11 +45,9 @@
 (require 'init-hippie-expand)
 (require 'init-sessions)
 
-(require 'init-yasnippet)
+;;(require 'init-yasnippet)
 (require 'init-company-mode)
-(require 'init-clang-format)
 (require 'init-cc-mode)
-(require 'init-rtags)
 (require 'init-python-mode)
 (require 'init-evil-mode)
 
