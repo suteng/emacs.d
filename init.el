@@ -45,7 +45,7 @@
 (require 'init-hippie-expand)
 (require 'init-sessions)
 
-(require 'init-yasnippet)
+(require 'init-snippet)
 (require 'init-completion)
 (require 'init-cc-mode)
 (require 'init-python-mode)
