@@ -25,6 +25,7 @@
       (t (:inherit company-tooltip-selection)))))
   )
 
+;; install counsel will auto install ivy and swiper
 (use-package counsel 
   :ensure t
   :defer 0
