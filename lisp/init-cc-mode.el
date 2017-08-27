@@ -28,9 +28,16 @@
 (use-package rtags
   :defer t
   :init
+  :after
   :config
   (setq rtags-autostart-diagnostics t)
   (rtags-enable-standard-keybindings)
+  (evil-leader/set-key
+   "rj" 'rtags-find-symbol-at-point
+   "rf" 'rtags-find-references-at-point
+   "rv" 'rtags-find-virtuals-at-point
+   "ri" 'rtags-symbol-info
+   "rb" 'rtags-location-stack-back)
   )
 
 (use-package company-rtags
@@ -41,6 +48,7 @@
       'company-backends 'company-rtags))
   :config
   )
+
 (use-package irony
   :commands irony-install-server
 

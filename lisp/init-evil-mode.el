@@ -16,6 +16,8 @@
   (evil-leader/set-key
    "e" 'find-file
    "b" 'switch-to-buffer
+   "w" 'save-buffer
    "k" 'kill-buffer)
   )
+
 (provide 'init-evil-mode)

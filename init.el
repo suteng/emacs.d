@@ -39,16 +39,15 @@
 (require 'init-dired)
 (require 'init-ibuffer)
 (require 'init-flycheck)
-
 (require 'init-recentf)
 (require 'init-hippie-expand)
 (require 'init-sessions)
 
+(require 'init-evil-mode)
 (require 'init-snippet)
 (require 'init-completion)
 (require 'init-cc-mode)
 (require 'init-python-mode)
-(require 'init-evil-mode)
 (require 'init-git)
 (require 'init-project)
 
