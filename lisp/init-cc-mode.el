@@ -37,6 +37,8 @@
    "rf" 'rtags-find-references-at-point
    "rv" 'rtags-find-virtuals-at-point
    "ri" 'rtags-symbol-info
+   "rn" 'rtags-next-match
+   "rN" 'rtags-previous-match
    "rb" 'rtags-location-stack-back)
   )
 
