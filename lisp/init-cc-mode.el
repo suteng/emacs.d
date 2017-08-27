@@ -7,7 +7,10 @@
 
 (use-package cc-mode
   :bind (:map c-mode-base-map
-              ("C-c t" . ff-find-other-file)))
+              ("C-c t" . ff-find-other-file)
+              ("M-n" . rtags-next-match)
+              ("M-p" . rtags-previous-match)
+	      ))
 
 (use-package google-c-style
   :defer t
