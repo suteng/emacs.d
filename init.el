@@ -47,9 +47,11 @@
 (require 'init-snippet)
 (require 'init-completion)
 (require 'init-cc-mode)
+(require 'init-pb-mode)
 (require 'init-python-mode)
 (require 'init-git)
 (require 'init-project)
+(require 'init-tools)
 
 (when *is-a-mac*
   (require-package 'osx-location))
