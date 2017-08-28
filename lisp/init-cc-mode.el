@@ -103,7 +103,10 @@
       (add-to-list 'company-backends #'company-c-headers)))
 
   (use-package flycheck-irony
-    :config (add-hook 'irony-mode-hook 'flycheck-irony-setup))
+    :config
+    (add-hook 'irony-mode-hook 'flycheck-irony-setup)
+    (setq flycheck-highlighting-mode 'nil)
+    )
 
   (use-package flycheck-clang-analyzer
     :after flycheck-irony
