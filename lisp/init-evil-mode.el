@@ -35,4 +35,23 @@
   :config
   (add-hook 'cc-mode-hook #'evil-smartparens-mode)
   )
+
+;; (use-package evil-search-highlight-persist
+;;   :ensure t
+;;   :init
+;;   :config
+;;   (global-evil-search-highlight-persist t)
+;;   )
+
+(use-package evil-nerd-commenter
+  :ensure t
+  :init
+  :config
+  (evil-leader/set-key
+    "cc" 'evilnc-comment-or-uncomment-lines
+    "cp" 'evilnc-comment-or-uncomment-paragraphs
+    "cr" 'comment-or-uncomment-region
+    )
+  )
+
 (provide 'init-evil-mode)
