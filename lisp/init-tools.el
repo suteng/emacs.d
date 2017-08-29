@@ -8,4 +8,8 @@
   (global-set-key [(meta f3)] 'highlight-symbol-query-replace)
   )
 
+(use-package project
+  :defer t
+  :bind ("C-c p f" . project-find-file))
+
 (provide 'init-tools)
