@@ -10,6 +10,12 @@
 
 (use-package project
   :defer t
-  :bind ("C-c p f" . project-find-file))
+  :after evil
+  :bind ("C-c p f" . project-find-file)
+  :config
+  (evil-leader/set-key
+    "f" 'project-find-file
+    )
+  )
 
 (provide 'init-tools)
