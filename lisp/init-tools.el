@@ -1,4 +1,4 @@
-
+(use-package dired+)
 (use-package highlight-symbol
   :init
   :config
