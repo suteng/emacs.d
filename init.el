@@ -29,7 +29,6 @@
 ;;----------------------------------------------------------------------------
 ;; Load configs for specific features and modes
 ;;----------------------------------------------------------------------------
-
 (require 'init-osx-keys)
 (require 'init-gui-frames)
 (require 'init-editing-utils)
