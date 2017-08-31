@@ -5,19 +5,19 @@
     :init
     :config
     (if (daemonp)
-	(add-hook 'after-make-frame-functions
-		  (lambda (frame)
-		    (select-frame frame)
-		    (if (display-graphic-p frame)
-			((set-frame-parameter nil 'background-mode 'dark)
-			 (load-theme 'solarized t))
-		      ((set-terminal-parameter nil 'background-mode 'dark)
-		       (load-theme 'solarized t)))))
+    	(add-hook 'after-make-frame-functions
+    		  (lambda (frame)
+    		    (select-frame frame)
+    		    (if (display-graphic-p frame)
+    			((set-frame-parameter nil 'background-mode 'dark)
+    			 (load-theme 'solarized t))
+    		      ((set-terminal-parameter nil 'background-mode 'dark)
+    		       (load-theme 'solarized t)))))
       (set-frame-parameter nil 'background-mode 'dark)
       (load-theme 'solarized t)
       )
 
-    ;; (set-frame-parameter nil 'background-mode 'light)
+
     ;; (set-terminal-parameter nil 'background-mode 'dark)
     ;; (if (daemonp)
     ;; 	(add-hook 'after-make-frame-functions
