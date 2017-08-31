@@ -22,7 +22,6 @@
 ;; Bootstrap config
 ;;----------------------------------------------------------------------------
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
-(require 'init-site-lisp) ;; Must come before elpa, as it may provide package.el
 (require 'init-elpa)      ;; Machinery for installing required packages
 (require 'init-exec-path) ;; Set up $PATH
 
@@ -42,14 +41,14 @@
 (require 'init-python-mode)
 (require 'init-git)
 (require 'init-tools)
+(require 'init-theme)
 
 ;;----------------------------------------------------------------------------
 ;; Allow access from emacsclient
 ;;----------------------------------------------------------------------------
-(require 'server)
-(unless (server-running-p)
-  (server-start))
-
+;; (require 'server)
+;; (unless (server-running-p)
+;;   (server-start))
 
 ;;----------------------------------------------------------------------------
 ;; Variables configured via the interactive 'customize' interface
