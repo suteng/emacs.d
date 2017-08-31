@@ -37,9 +37,13 @@
 ;;----------------------------------------------------------------------------
 ;; Handy key bindings
 ;;----------------------------------------------------------------------------
-(require-package 'ace-jump-mode)
-(global-set-key (kbd "C-;") 'ace-jump-mode)
-(global-set-key (kbd "C-:") 'ace-jump-word-mode)
+(use-package ace-jump-mode
+  :ensure t
+  :init
+  :config
+  (global-set-key (kbd "C-;") 'ace-jump-mode)
+  (global-set-key (kbd "C-:") 'ace-jump-word-mode)
+  )
 
 ;; Save all tempfiles in $TMPDIR/emacs$UID/
 (defconst emacs-tmp-dir (format "%s/%s%s/" temporary-file-directory "emacs" (user-uid)))
