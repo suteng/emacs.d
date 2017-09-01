@@ -1,6 +1,12 @@
 (add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
 (add-to-list 'auto-mode-alist '("\\.cu\\'" . c++-mode)) ;CUDA
 
+(use-package modern-cpp-font-lock
+  :ensure t
+  :config
+  (add-hook 'c++-mode-hook #'modern-c++-font-lock-mode)
+  )
+
 (use-package find-file
   :defer t
   :init (setq-default ff-always-in-other-window t))
