@@ -43,6 +43,7 @@
    "rn" 'rtags-next-match
    "rN" 'rtags-previous-match
    "rb" 'rtags-location-stack-back)
+  (add-hook 'rtags-jump-hook 'evil-set-jump)
   )
 
 (use-package company-rtags
