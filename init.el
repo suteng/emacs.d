@@ -42,6 +42,7 @@
 (require 'init-git)
 (require 'init-tools)
 (require 'init-theme)
+(require 'init-latex)
 
 ;;----------------------------------------------------------------------------
 ;; Allow access from emacsclient
